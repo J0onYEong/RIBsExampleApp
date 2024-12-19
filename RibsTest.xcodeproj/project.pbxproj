@@ -20,10 +20,9 @@
 		9DC5DE0D2D12C29700EA2473 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE0C2D12C29700EA2473 /* RIBs */; };
 		9DC5DE1B2D12E73300EA2473 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE1A2D12E73300EA2473 /* RxCocoa-Dynamic */; };
 		9DC5DE1D2D12E73C00EA2473 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE1C2D12E73C00EA2473 /* RxCocoa-Dynamic */; };
-		9DC5DE1E2D12E73C00EA2473 /* RxCocoa-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE1C2D12E73C00EA2473 /* RxCocoa-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9DC5DE212D12E74200EA2473 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE202D12E74200EA2473 /* RxCocoa-Dynamic */; };
-		9DC5DE222D12E74200EA2473 /* RxCocoa-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE202D12E74200EA2473 /* RxCocoa-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9DC5DE902D13F56100EA2473 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE8F2D13F56100EA2473 /* SnapKit */; };
+		9DC5DECE2D1413B900EA2473 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DECD2D1413B900EA2473 /* RIBs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9DC5DE1E2D12E73C00EA2473 /* RxCocoa-Dynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +93,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9DC5DE222D12E74200EA2473 /* RxCocoa-Dynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC5DECE2D1413B900EA2473 /* RIBs in Frameworks */,
 				9DC5DDCD2D12C14800EA2473 /* TextDetailRib.framework in Frameworks */,
 				9DC5DDDE2D12C15000EA2473 /* RootRib.framework in Frameworks */,
 				9DC5DDBB2D12C13800EA2473 /* TextEditRib.framework in Frameworks */,
@@ -297,6 +295,7 @@
 			);
 			name = RibsTest;
 			packageProductDependencies = (
+				9DC5DECD2D1413B900EA2473 /* RIBs */,
 			);
 			productName = RibsTest;
 			productReference = 9DC5DD982D12C0C700EA2473 /* RibsTest.app */;
@@ -537,7 +536,6 @@
 				INFOPLIST_FILE = RibsTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -570,7 +568,6 @@
 				INFOPLIST_FILE = RibsTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -596,7 +593,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -714,7 +711,7 @@
 		9DC5DDBE2D12C13800EA2473 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -797,7 +794,7 @@
 		9DC5DDD02D12C14800EA2473 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -809,6 +806,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -836,7 +834,7 @@
 		9DC5DDD12D12C14800EA2473 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -848,6 +846,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -875,7 +874,7 @@
 		9DC5DDE12D12C15000EA2473 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -887,6 +886,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -914,7 +914,7 @@
 		9DC5DDE22D12C15000EA2473 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -926,6 +926,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1062,6 +1063,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9DC5DE8E2D13F56100EA2473 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		9DC5DECD2D1413B900EA2473 /* RIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DC5DE072D12C27F00EA2473 /* XCRemoteSwiftPackageReference "RIBs" */;
+			productName = RIBs;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

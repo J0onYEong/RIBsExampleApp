@@ -39,8 +39,9 @@ extension RootRouter {
         let router = textEditRibBuilder.build(
             withListener: interactor
         )
-        let vc = router.viewControllable.uiviewController
+        attachChild(router)
         
+        let vc = router.viewControllable.uiviewController
         navigationController.pushViewController(vc, animated: false)
     }
 }
