@@ -39,6 +39,9 @@ class TextEditViewController: UIViewController, TextEditPresentable, TextEditVie
     
     private func setUI() {
         
+        // view
+        view.backgroundColor = .white
+        
         // textField
         textField.font = .preferredFont(forTextStyle: .body)
         textField.textColor = .black
@@ -82,6 +85,12 @@ extension TextEditViewController {
             .displayButton
             .map({ !$0 })
             .bind(to: button.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        listener
+            .initialText
+            .asObservable()
+            .bind(to: textField.rx.text)
             .disposed(by: disposeBag)
     }
 }
