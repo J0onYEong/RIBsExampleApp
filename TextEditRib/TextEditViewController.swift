@@ -72,6 +72,7 @@ class TextEditViewController: UIViewController, TextEditPresentable, TextEditVie
 
 
 // MARK: TextEditPresentable
+// called by interactor
 extension TextEditViewController {
     
     func bind(listener: TextEditPresenterListener) {
@@ -88,6 +89,7 @@ extension TextEditViewController {
 
 
 // MARK: TextEditViewControllable
+// called by router
 extension TextEditViewController {
     
     func present(_ viewControllable: any ViewControllable) {

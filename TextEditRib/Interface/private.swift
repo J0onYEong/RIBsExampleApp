@@ -11,7 +11,7 @@ import RIBs
 import RxSwift
 
 // MARK: Builder
-protocol TextEditBuildable: Buildable {
+public protocol TextEditBuildable: Buildable {
 
     func build(withListener lisner: TextEditListener) -> TextEditRouting
 }
@@ -20,20 +20,25 @@ protocol TextEditBuildable: Buildable {
 // MARK: Iteractor
 protocol TextEditInteractable: AnyObject {
     
+    // Interactor -> Router
     var router: TextEditRouting? { get set }
+    
+    // Interactor -> Super interactor
     var listener: TextEditListener? { get set }
 }
 
 
 // MARK: Router
-protocol TextEditRouting: AnyObject {
+// Interactor -> Router
+// Super Router -> Router
+public protocol TextEditRouting: ViewableRouting {
     
     func attachTextDetailRib()
     
     func dettachTextDetailRib()
 }
 
-
+// Router -> Presenter(ViewController)
 protocol TextEditViewControllable: UIViewController, ViewControllable {
     
     func present(_ viewControllable: ViewControllable)
@@ -43,6 +48,7 @@ protocol TextEditViewControllable: UIViewController, ViewControllable {
 
 
 // MARK: Presenter
+// Presenter -> Interactor
 protocol TextEditPresenterListener: AnyObject {
     
     // view models
@@ -50,7 +56,7 @@ protocol TextEditPresenterListener: AnyObject {
     var initialText: Single<String> { get }
 }
 
-
+// Interactor -> Presenter
 protocol TextEditPresentable: AnyObject {
     
     // Inputs

@@ -7,10 +7,10 @@
 
 import RIBs
 
-final class TextEditBuilder: Builder<TextEditDependency>, TextEditBuildable {
+public final class TextEditBuilder: Builder<TextEditDependency>, TextEditBuildable {
     
     
-    func build(withListener lisner: TextEditListener) -> TextEditRouting {
+    public func build(withListener lisner: TextEditListener) -> TextEditRouting {
         
         // Component
         let component: EditTextComponent = .init(dependency: self.dependency)
