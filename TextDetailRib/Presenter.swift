@@ -27,6 +27,10 @@ class TextDetailViewController: UIViewController, TextDetailViewControllable, Te
     }
     required init?(coder: NSCoder) { nil }
     
+    deinit {
+        print("deinit \(String(describing: Self.self))")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

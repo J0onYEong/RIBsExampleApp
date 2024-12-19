@@ -36,6 +36,10 @@ class TextDetailInteractor:
             .disposed(by: disposeBag)
     }
     
+    deinit {
+        print("deinit \(String(describing: Self.self))")
+    }
+    
     override func didBecomeActive() {
         super.didBecomeActive()
         

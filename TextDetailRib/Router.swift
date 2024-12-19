@@ -12,6 +12,10 @@ class TextDetailRouter: ViewableRouter<TextDetailInteractable, TextDetailViewCon
     override init(interactor: TextDetailInteractable, viewController: TextDetailViewControllable) {
         super.init(interactor: interactor, viewController: viewController)
     }
+    
+    deinit {
+        print("deinit \(String(describing: Self.self))")
+    }
 }
 
 
