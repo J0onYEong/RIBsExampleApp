@@ -16,13 +16,18 @@
 		9DC5DDE52D12C16500EA2473 /* TextEditRib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC5DDB52D12C13800EA2473 /* TextEditRib.framework */; };
 		9DC5DDEA2D12C16D00EA2473 /* TextDetailRib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC5DDC72D12C14800EA2473 /* TextDetailRib.framework */; };
 		9DC5DE092D12C27F00EA2473 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE082D12C27F00EA2473 /* RIBs */; };
-		9DC5DE0B2D12C29400EA2473 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE0A2D12C29400EA2473 /* RIBs */; };
 		9DC5DE0D2D12C29700EA2473 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE0C2D12C29700EA2473 /* RIBs */; };
 		9DC5DE1B2D12E73300EA2473 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE1A2D12E73300EA2473 /* RxCocoa-Dynamic */; };
 		9DC5DE1D2D12E73C00EA2473 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE1C2D12E73C00EA2473 /* RxCocoa-Dynamic */; };
 		9DC5DE212D12E74200EA2473 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE202D12E74200EA2473 /* RxCocoa-Dynamic */; };
-		9DC5DE902D13F56100EA2473 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DE8F2D13F56100EA2473 /* SnapKit */; };
 		9DC5DECE2D1413B900EA2473 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DECD2D1413B900EA2473 /* RIBs */; };
+		9DC5DEDB2D141F4F00EA2473 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DEDA2D141F4F00EA2473 /* SnapKit-Dynamic */; };
+		9DC5DEDE2D141F5B00EA2473 /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DEDD2D141F5B00EA2473 /* RIBs */; };
+		9DC5DEE02D141F5F00EA2473 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DEDF2D141F5F00EA2473 /* SnapKit-Dynamic */; };
+		9DC5DEE42D141F6E00EA2473 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DEE32D141F6E00EA2473 /* SnapKit-Dynamic */; };
+		9DC5DEE52D141F6E00EA2473 /* SnapKit-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DEE32D141F6E00EA2473 /* SnapKit-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9DC5DEE72D141F7400EA2473 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DEE62D141F7400EA2473 /* RxCocoa-Dynamic */; };
+		9DC5DEE82D141F7400EA2473 /* RxCocoa-Dynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9DC5DEE62D141F7400EA2473 /* RxCocoa-Dynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +76,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9DC5DDCE2D12C14800EA2473 /* TextDetailRib.framework in Embed Frameworks */,
+				9DC5DEE82D141F7400EA2473 /* RxCocoa-Dynamic in Embed Frameworks */,
 				9DC5DDDF2D12C15000EA2473 /* RootRib.framework in Embed Frameworks */,
 				9DC5DDBC2D12C13800EA2473 /* TextEditRib.framework in Embed Frameworks */,
+				9DC5DEE52D141F6E00EA2473 /* SnapKit-Dynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +95,16 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9DC5DE232D12E74200EA2473 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DC5DEE22D141F5F00EA2473 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -177,9 +194,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC5DEE42D141F6E00EA2473 /* SnapKit-Dynamic in Frameworks */,
 				9DC5DECE2D1413B900EA2473 /* RIBs in Frameworks */,
 				9DC5DDCD2D12C14800EA2473 /* TextDetailRib.framework in Frameworks */,
 				9DC5DDDE2D12C15000EA2473 /* RootRib.framework in Frameworks */,
+				9DC5DEE72D141F7400EA2473 /* RxCocoa-Dynamic in Frameworks */,
 				9DC5DDBB2D12C13800EA2473 /* TextEditRib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,10 +207,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DC5DE0B2D12C29400EA2473 /* RIBs in Frameworks */,
-				9DC5DE902D13F56100EA2473 /* SnapKit in Frameworks */,
 				9DC5DE1B2D12E73300EA2473 /* RxCocoa-Dynamic in Frameworks */,
 				9DC5DDEA2D12C16D00EA2473 /* TextDetailRib.framework in Frameworks */,
+				9DC5DEDE2D141F5B00EA2473 /* RIBs in Frameworks */,
+				9DC5DEE02D141F5F00EA2473 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +220,7 @@
 			files = (
 				9DC5DE1D2D12E73C00EA2473 /* RxCocoa-Dynamic in Frameworks */,
 				9DC5DE0D2D12C29700EA2473 /* RIBs in Frameworks */,
+				9DC5DEDB2D141F4F00EA2473 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +316,8 @@
 			name = RibsTest;
 			packageProductDependencies = (
 				9DC5DECD2D1413B900EA2473 /* RIBs */,
+				9DC5DEE32D141F6E00EA2473 /* SnapKit-Dynamic */,
+				9DC5DEE62D141F7400EA2473 /* RxCocoa-Dynamic */,
 			);
 			productName = RibsTest;
 			productReference = 9DC5DD982D12C0C700EA2473 /* RibsTest.app */;
@@ -309,6 +331,7 @@
 				9DC5DDB12D12C13800EA2473 /* Sources */,
 				9DC5DDB22D12C13800EA2473 /* Frameworks */,
 				9DC5DDB32D12C13800EA2473 /* Resources */,
+				9DC5DEE22D141F5F00EA2473 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,9 +343,9 @@
 			);
 			name = TextEditRib;
 			packageProductDependencies = (
-				9DC5DE0A2D12C29400EA2473 /* RIBs */,
 				9DC5DE1A2D12E73300EA2473 /* RxCocoa-Dynamic */,
-				9DC5DE8F2D13F56100EA2473 /* SnapKit */,
+				9DC5DEDD2D141F5B00EA2473 /* RIBs */,
+				9DC5DEDF2D141F5F00EA2473 /* SnapKit-Dynamic */,
 			);
 			productName = TextEditRib;
 			productReference = 9DC5DDB52D12C13800EA2473 /* TextEditRib.framework */;
@@ -349,6 +372,7 @@
 			packageProductDependencies = (
 				9DC5DE0C2D12C29700EA2473 /* RIBs */,
 				9DC5DE1C2D12E73C00EA2473 /* RxCocoa-Dynamic */,
+				9DC5DEDA2D141F4F00EA2473 /* SnapKit-Dynamic */,
 			);
 			productName = TextDetailRib;
 			productReference = 9DC5DDC72D12C14800EA2473 /* TextDetailRib.framework */;
@@ -1034,11 +1058,6 @@
 			package = 9DC5DE072D12C27F00EA2473 /* XCRemoteSwiftPackageReference "RIBs" */;
 			productName = RIBs;
 		};
-		9DC5DE0A2D12C29400EA2473 /* RIBs */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9DC5DE072D12C27F00EA2473 /* XCRemoteSwiftPackageReference "RIBs" */;
-			productName = RIBs;
-		};
 		9DC5DE0C2D12C29700EA2473 /* RIBs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9DC5DE072D12C27F00EA2473 /* XCRemoteSwiftPackageReference "RIBs" */;
@@ -1059,15 +1078,35 @@
 			package = 9DC5DE192D12E73300EA2473 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = "RxCocoa-Dynamic";
 		};
-		9DC5DE8F2D13F56100EA2473 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9DC5DE8E2D13F56100EA2473 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
 		9DC5DECD2D1413B900EA2473 /* RIBs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9DC5DE072D12C27F00EA2473 /* XCRemoteSwiftPackageReference "RIBs" */;
 			productName = RIBs;
+		};
+		9DC5DEDA2D141F4F00EA2473 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DC5DE8E2D13F56100EA2473 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		9DC5DEDD2D141F5B00EA2473 /* RIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DC5DE072D12C27F00EA2473 /* XCRemoteSwiftPackageReference "RIBs" */;
+			productName = RIBs;
+		};
+		9DC5DEDF2D141F5F00EA2473 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DC5DE8E2D13F56100EA2473 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		9DC5DEE32D141F6E00EA2473 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DC5DE8E2D13F56100EA2473 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		9DC5DEE62D141F7400EA2473 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DC5DE192D12E73300EA2473 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -15,7 +15,7 @@ class RootComponent: Component<RootDependency>, TextEditDependency {
     
     var initialText: String {
         
-        "This is initial text"
+        "init"
     }
     
     var navigationController: UINavigationController {

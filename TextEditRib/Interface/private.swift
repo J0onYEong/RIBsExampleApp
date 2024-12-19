@@ -7,18 +7,13 @@
 
 import UIKit
 
+import TextDetailRib
+
 import RIBs
 import RxSwift
 
-// MARK: Builder
-public protocol TextEditBuildable: Buildable {
-
-    func build(withListener lisner: TextEditListener) -> TextEditRouting
-}
-
-
 // MARK: Iteractor
-protocol TextEditInteractable: AnyObject {
+protocol TextEditInteractable: AnyObject, TextDetailListener {
     
     // Interactor -> Router
     var router: TextEditRouting? { get set }
@@ -29,14 +24,6 @@ protocol TextEditInteractable: AnyObject {
 
 
 // MARK: Router
-// Interactor -> Router
-// Super Router -> Router
-public protocol TextEditRouting: ViewableRouting {
-    
-    func attachTextDetailRib()
-    
-    func dettachTextDetailRib()
-}
 
 // Router -> Presenter(ViewController)
 protocol TextEditViewControllable: UIViewController, ViewControllable {

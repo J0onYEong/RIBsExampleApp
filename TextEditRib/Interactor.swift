@@ -5,13 +5,20 @@
 //  Created by choijunios on 12/18/24.
 //
 
+import TextDetailRib
+
 import RIBs
 import RxSwift
+import RxRelay
 
 final class TextEditInteracter:
     PresentableInteractor<TextEditPresentable>,
     TextEditInteractable,
-    TextEditPresenterListener {
+    TextEditPresenterListener
+{
+    
+    private let textForDisplayPublisher: BehaviorRelay<String> = .init(value: "")
+    lazy var textForDisplay: Observable<String> = textForDisplayPublisher.asObservable()
     
     
     // Interactor -> Router
@@ -33,7 +40,11 @@ final class TextEditInteracter:
     private let disposeBag: DisposeBag = .init()
     
     
-    init(initialText: String, presenter: TextEditPresentable) {
+    init(
+        initialText: String,
+        listener: TextEditListener,
+        presenter: TextEditPresentable)
+    {
         
         self.initialText = Single.just(initialText)
         
@@ -67,11 +78,15 @@ final class TextEditInteracter:
         
         presenter
             .buttonClicked
+            .withLatestFrom(presenter.editingText)
             .withUnretained(self)
-            .subscribe(onNext: { interactor, _ in
-                
+            .subscribe(onNext: { interactor, text in
+
                 // 디테일 화면 디스플레이
                 interactor.router?.attachTextDetailRib()
+                
+                
+                interactor.textForDisplayPublisher.accept(text)
                 
             })
             .disposed(by: disposeBag)
@@ -82,5 +97,15 @@ final class TextEditInteracter:
     private func checkTextAvailable(_ text: String) -> Bool {
         
         return text.count > 5
+    }
+}
+
+
+// MARK: TextDetailListener
+extension TextEditInteracter {
+    
+    func detachTextDetailRib() {
+        
+        router?.dettachTextDetailRib()
     }
 }

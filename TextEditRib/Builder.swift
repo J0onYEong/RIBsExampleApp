@@ -5,6 +5,8 @@
 //  Created by choijunios on 12/18/24.
 //
 
+import TextDetailRib
+
 import RIBs
 
 public final class TextEditBuilder: Builder<TextEditDependency>, TextEditBuildable {
@@ -23,12 +25,20 @@ public final class TextEditBuilder: Builder<TextEditDependency>, TextEditBuildab
         // Interactor
         let interactor: TextEditInteractable = TextEditInteracter(
             initialText: component.initialText,
+            listener: lisner,
             presenter: viewContrller
+        )
+        
+        
+        // TextDetail Builder
+        let textDetailBuilder: TextDetailBuildable = TextDetailBuilder(
+            dependency: component
         )
         
         
         // Router
         let router: TextEditRouting = TextEditRouter(
+            textDetailBuilder: textDetailBuilder,
             interactor: interactor,
             viewController: viewContrller
         )
